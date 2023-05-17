@@ -343,7 +343,7 @@ app.post("/login",function(req,res){
     const password=req.body.password;
     User.findOne({email:username},function(err,foundlist){
         if(err){
-            res.render("failure","User with this details not found please try again");
+            res.render("failure",{errorName:"User with this details not found please try again"});
             console.log("err");
         }else{
             if(foundlist){
@@ -359,9 +359,9 @@ app.post("/login",function(req,res){
                         //     })
                         // })
                     }
-                }
-            )}else{
-                res.render("failure","User with this details not found please try again");
+                })
+            }else{
+                res.render("failure",{errorName:"User with this details not found please try again"});
             }
         }
     })
