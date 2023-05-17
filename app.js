@@ -103,7 +103,10 @@ app.use(bodyParser.urlencoded({
 // mongoose.connect("mongodb+srv://sairahul:C8XSa3aEjplxCx69@cluster0.8ukp5.mongodb.net/movieDB").then(()=>{
 //     console.log("DB connected");
 // })
-mongoose.connect("mongodb://localhost:27017/movieDB",{useNewUrlParser:true});
+// mongoose.connect("mongodb://localhost:27017/movieDB",{useNewUrlParser:true});
+mongoose.connect("mongodb+srv://sairahul:1234@cluster0.ildxuli.mongodb.net/movieDB?retryWrites=true&w=majority").then(()=>{
+    console.log("DB Connected");
+})
 
 //for the signup page
 const movieSchema=new mongoose.Schema({
