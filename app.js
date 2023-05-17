@@ -368,6 +368,6 @@ app.post("/login",function(req,res){
 })
 
  
-app.listen(process.env.PORT || 3007, function() {
-  console.log("Server started succesfully");
+app.listen(80, function() {
+  console.log("Server started succesfully on port 80");
 });        
