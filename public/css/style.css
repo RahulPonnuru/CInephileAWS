@@ -349,3 +349,11 @@ footer{
         border-radius: 5px;
     }
 }
+@media (max-width:460px){
+    .button1{
+        display: block;
+        margin-left: 44%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
